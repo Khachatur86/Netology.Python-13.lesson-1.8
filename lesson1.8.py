@@ -30,8 +30,13 @@ class Birds(Animals):
 
 
 class Artiodactyls(Animals):
-    def distance_of_running(self, distance):
+
+
+    def __init__(self, name, legs, food, distance=0):
+        super(Artiodactyls, self).__init__(name, legs, food)
         self.distance = distance
+
+    def distance_of_running(self):
         print("I can run a:", self.distance, "miles.")
 
 
@@ -50,24 +55,24 @@ goose.sound("gagaga")
 goose.display()
 goose.height_of_flight(15)
 
-cow = Artiodactyls("Buurenka", 4, "grass")
+cow = Artiodactyls("Buurenka", 4, "grass", 20)
 cow.sound("muuu")
 cow.display()
-cow.distance_of_running(10)
+cow.distance_of_running()
 
-goat = Artiodactyls("Marta", 4, "grass")
+goat = Artiodactyls("Marta", 4, "grass", 30)
 goat.sound("beeeee")
 goat.display()
-goat.distance_of_running(17)
+goat.distance_of_running()
 
-sheep = Artiodactyls("Shon", 4, "grass")
+sheep = Artiodactyls("Shon", 4, "grass", 40)
 sheep.sound("beebee")
 sheep.display()
-sheep.distance_of_running(9)
+sheep.distance_of_running()
 
-pig = Artiodactyls("Funtic", 4, "acorn")
+pig = Artiodactyls("Funtic", 4, "acorn", 50)
 pig.sound("khrukhru")
 pig.display()
-pig.distance_of_running(30)
+pig.distance_of_running()
 
 
