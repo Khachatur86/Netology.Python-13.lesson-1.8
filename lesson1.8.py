@@ -1,5 +1,7 @@
 import requests
 
+
+
 class Animals():
     """Common class of animals"""
 
@@ -17,11 +19,14 @@ class Animals():
         #  оно работало правильно: оно бы брало food из __init__, возможно ли такое?
         
 """Class of birds"""
+
 class Birds(Animals):
     def height_of_flight(self, height):
         self.height = height
         print("I can fly an", self.height, "metrs above the Earth.")
+        
 """Class of Artodactils"""
+
 class Artiodactyls(Animals):
 
     def __init__(self, name, legs, food, distance=0):
