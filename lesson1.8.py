@@ -15,22 +15,14 @@ class Animals():
     def display(self):
         print("I am eating a ", self.food, ".")  # Разобрался :) Я бы хотел, чтобы не указывая в скобках переменную food
         #  оно работало правильно: оно бы брало food из __init__, возможно ли такое?
-
-
+        
 """Class of birds"""
-
-
 class Birds(Animals):
     def height_of_flight(self, height):
         self.height = height
         print("I can fly an", self.height, "metrs above the Earth.")
-
-
 """Class of Artodactils"""
-
-
 class Artiodactyls(Animals):
-
 
     def __init__(self, name, legs, food, distance=0):
         super(Artiodactyls, self).__init__(name, legs, food)
@@ -38,7 +30,6 @@ class Artiodactyls(Animals):
 
     def distance_of_running(self):
         print("I can run a:", self.distance, "miles.")
-
 
 duck = Birds("Donald", 2, "worm")
 duck.sound("kryakrya")
@@ -74,5 +65,3 @@ pig = Artiodactyls("Funtic", 4, "acorn", 50)
 pig.sound("khrukhru")
 pig.display()
 pig.distance_of_running()
-
-
