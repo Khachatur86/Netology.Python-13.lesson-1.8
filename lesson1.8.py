@@ -1,6 +1,6 @@
 import requests
 
-req = requests.get('https://google.ru')
+req = requests.get('https://yahoo.ru')
 
 
 class Animals():
