@@ -1,36 +1,40 @@
 import requests
 
-class Animals():
+req = requests.get('https://google.ru')
+
+
+class Animals:
     """Common class of animals"""
 
     def __init__(self, name, legs, food):
+        self.voice = voice
         self.name = name
         self.legs = legs
         self.food = food
 
-    def sound(self, voice):
-        self.voice = voice
+    def sound(self):
         print("I cry", self.voice, ".")
 
     def display(self):
-        print("I am eating a ", self.food, ".")  # Разобрался :) Я бы хотел, чтобы не указывая в скобках переменную food
-        #  оно работало правильно: оно бы брало food из __init__, возможно ли такое?
+        print("I am eating a ", self.food, ".")
 
 
 """Class of birds"""
 
 
 class Birds(Animals):
-    def height_of_flight(self, height):
+    def __init__(self, name, legs, food):
+        super().__init__(name, legs, food)
         self.height = height
+
+    def height_of_flight(self):
         print("I can fly an", self.height, "metrs above the Earth.")
 
 
-"""Class of Artodactils"""
+"""Class of Artiodactyls"""
 
 
 class Artiodactyls(Animals):
-
 
     def __init__(self, name, legs, food, distance=0):
         super(Artiodactyls, self).__init__(name, legs, food)
@@ -75,4 +79,4 @@ pig.sound("khrukhru")
 pig.display()
 pig.distance_of_running()
 
-
+# Correction
